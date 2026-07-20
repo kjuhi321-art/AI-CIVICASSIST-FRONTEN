@@ -117,7 +117,7 @@ function CitizenForm() {
     navigate("/loading");
 
     try {
-      const backendUrl = "https://ai-civicassist-back.onrender.com";
+      const backendUrl = "https://ai-civicassist-back.onrender.com?api/check-eligibility";
       
       const response = await fetch(backendUrl, {
         method: "POST",
