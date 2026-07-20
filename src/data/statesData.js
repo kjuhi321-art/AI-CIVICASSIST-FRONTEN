@@ -1,0 +1,15 @@
+export const districts = {
+  "Andhra Pradesh": ["Visakhapatnam", "Vijayawada", "Guntur", "Nellore"],
+  "Arunachal Pradesh": ["Itanagar", "Tawang", "Pasighat"],
+  Assam: ["Guwahati", "Dibrugarh", "Silchar"],
+  Bihar: ["Patna", "Gaya", "Muzaffarpur", "Bhagalpur"],
+  Delhi: ["New Delhi", "North Delhi", "South Delhi", "East Delhi", "West Delhi"],
+  Gujarat: ["Ahmedabad", "Surat", "Rajkot", "Vadodara"],
+  Karnataka: ["Bengaluru", "Mysuru", "Hubli", "Mangalore"],
+  Maharashtra: ["Mumbai", "Pune", "Nagpur", "Nashik"],
+  Rajasthan: ["Jaipur", "Jodhpur", "Kota", "Ajmer"],
+  "Tamil Nadu": ["Chennai", "Coimbatore", "Madurai", "Salem"],
+  Telangana: ["Hyderabad", "Warangal", "Nizamabad"],
+  "Uttar Pradesh": ["Lucknow", "Kanpur", "Noida", "Agra", "Varanasi", "Prayagraj"],
+  "West Bengal": ["Kolkata", "Howrah", "Siliguri", "Durgapur"],
+};
