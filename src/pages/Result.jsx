@@ -116,7 +116,9 @@ function Result() {
             <div className="space-y-6">
               {schemes.map((scheme, index) => {
                 // Dynamically checks language localized key attributes from the AI Agent response setup
-                const name = currentLang === "Hindi" ? (scheme.name_hi || scheme.name) : (scheme.name || scheme.name_en);
+                // Backend (Groq) sends 'title' and 'step_by_step_guidance' — support those as primary,
+                // with 'name'/'steps' kept as fallback aliases for backward compatibility.
+                const name = currentLang === "Hindi" ? (scheme.name_hi || scheme.title || scheme.name) : (scheme.title || scheme.name || scheme.name_en);
                 const desc = currentLang === "Hindi" ? (scheme.description_hi || scheme.description) : (scheme.description || scheme.description_en);
                 const benefits = currentLang === "Hindi" ? (scheme.benefits_hi || scheme.benefits) : (scheme.benefits || scheme.benefits_en);
                 
@@ -127,7 +129,9 @@ function Result() {
                 );
                 
                 const steps = parseArrayData(
-                  currentLang === "Hindi" ? (scheme.steps_hi || scheme.steps) : (scheme.steps || scheme.steps_en)
+                  currentLang === "Hindi" 
+                    ? (scheme.steps_hi || scheme.step_by_step_guidance || scheme.steps) 
+                    : (scheme.step_by_step_guidance || scheme.steps || scheme.steps_en)
                 );
                 
                 const linkUrl = scheme.link || "https://www.india.gov.in";
